@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Claiborne Corridor",
+                "Location": "New Orleans, USA"
+            },
+            "geometry": {
+                "coordinates": [
+                    -90.07191596756387,
+                    29.965692184287605
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "The Bentway",
+                "Location": "Toronto, Canada"
+            },
+            "geometry": {
+                "coordinates": [
+                    -79.4051007811483,
+                    43.63777733094048
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "One Green Mile",
+                "Location": "Mumbai, India"
+            },
+            "geometry": {
+                "coordinates": [
+                    72.83477545398128,
+                    19.01071888913073
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "A8ernA",
+                "Location": "Zaanstad, the Netherlands"
+            },
+            "geometry": {
+                "coordinates": [
+                    4.808717845274515,
+                    52.46382508622506
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Taman Film",
+                "Location": "Bandung, Indonesia"
+            },
+            "geometry": {
+                "coordinates": [
+                    107.60804322256439,
+                    -6.898315507597857
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
