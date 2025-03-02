@@ -77,3 +77,13 @@ map.on('mouseleave', 'points', () => {
 
     popup.remove();
 });
+
+document.getElementById('return').addEventListener('click', () => {
+    map.flyTo({
+        center: [155.41187531993666, 60.61674897619747],
+        zoom: 1,
+        essential: true
+    });
+
+    map.setLayoutProperty('points', 'visibility', 'visible');
+});
