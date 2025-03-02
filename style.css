@@ -1,12 +1,16 @@
 html, body {
-    margin: 2;
-    padding: 2;
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 
 #info {
     overflow: auto;
     overflow-x: hidden;
+}
+
+#Toronto {
+    display: none;
 }
 
 #my-map {

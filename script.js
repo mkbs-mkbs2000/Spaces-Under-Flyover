@@ -70,6 +70,9 @@ map.on('click', 'points', (e) => {
     });
 
     map.setLayoutProperty('points', 'visibility', 'none');
+
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('Toronto').style.display = 'block';
 });
 
 map.on('mouseleave', 'points', () => {
@@ -77,6 +80,8 @@ map.on('mouseleave', 'points', () => {
 
     popup.remove();
 });
+
+
 
 document.getElementById('return').addEventListener('click', () => {
     map.flyTo({
@@ -86,4 +91,7 @@ document.getElementById('return').addEventListener('click', () => {
     });
 
     map.setLayoutProperty('points', 'visibility', 'visible');
+
+    document.getElementById('intro').style.display = 'block';
+    document.getElementById('Toronto').style.display = 'none';
 });
