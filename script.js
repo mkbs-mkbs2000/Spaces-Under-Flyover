@@ -48,7 +48,7 @@ map.on('mouseenter', 'points', (e) => {
 map.on('click', 'points', (e) => {
     console.log('Clicked feature:', e.features[0]);
 
-    const coordinates = e.features[0].properties.coordinates;
+    const coordinates = [e.features[0].properties.lon, e.features[0].properties.lat]; // Get the coordinates of the clicked point
 
     console.log('Clicked coordinates:', coordinates); // Log the coordinates
     
