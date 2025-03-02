@@ -46,12 +46,14 @@ map.on('mouseenter', 'points', (e) => {
 });
 
 map.on('click', 'points', (e) => {
-    const coordinates = e.features[0].geometry.coordinates;
+    console.log('Clicked feature:', e.features[0]);
+
+    const coordinates = e.features[0].properties.coordinates;
 
     console.log('Clicked coordinates:', coordinates); // Log the coordinates
     
     map.setCenter(coordinates);
-    
+
     map.setZoom(15);
 });
 

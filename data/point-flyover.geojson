@@ -5,7 +5,11 @@
             "type": "Feature",
             "properties": {
                 "Name": "Claiborne Corridor",
-                "Location": "New Orleans, USA"
+                "Location": "New Orleans, USA",
+                "coordinates": [
+                    -90.07191596756387,
+                    29.965692184287605
+                ]
             },
             "geometry": {
                 "coordinates": [
