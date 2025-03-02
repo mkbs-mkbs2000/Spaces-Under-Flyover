@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVoYW1tYWRraGFsaXMyMDAwIiwiYSI6ImNtNmllbGt4c
 
 const map = new mapboxgl.Map({
     container: 'my-map', // map container ID
-    style: 'mapbox://styles/muhammadkhalis2000/cm6yk8amv00kb01s16rkt56d2', // style URL
+    style: 'mapbox://styles/muhammadkhalis2000/cm7rzt31l001m01s01te6bc10', // style URL
     center: [155.41187531993666, 60.61674897619747], // starting position [lng, lat]
     zoom: 1,
 });
@@ -11,7 +11,8 @@ map.on('load', () => {
 
     map.addSource('points', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/point-flyover.geojson'
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/point-flyover.geojson',
+        tolerance: 0
     });
 
     map.addLayer({
@@ -26,7 +27,8 @@ map.on('load', () => {
 
     map.addSource('polygons',{
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/polygon-flyover.geojson'
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/polygon-flyover.geojson',
+        tolerance: 0
     });
 
     map.addLayer({
@@ -35,27 +37,42 @@ map.on('load', () => {
         'source': 'polygons',
         'paint': {
             'fill-color': '#007cbf',
-            'fill-opacity': 1
+            'fill-opacity': 0.5
         }
     })
 
 });
 
+const popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
 map.on('mouseenter', 'points', (e) => {
     map.getCanvas().style.cursor = 'pointer';
+
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const description = e.features[0].properties.Name + '<br>' + e.features[0].properties.Location;
+
+    popup
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
 });
 
 map.on('click', 'points', (e) => {
-    const features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
+    const coordinates = e.features[0].geometry.coordinates.slice();
 
-    if (features.length > 0) {
-        const coordinates = features[0].geometry.coordinates;
-        console.log('Clicked coordinates:', coordinates);
-        map.setCenter(e.features[0].properties.coord);
-        map.setZoom(15);
-    }
+    map.flyTo({
+        center: coordinates,
+        zoom: 13
+    });
+
+    map.setLayoutProperty('points', 'visibility', 'none');
 });
 
 map.on('mouseleave', 'points', () => {
     map.getCanvas().style.cursor = '';
+
+    popup.remove();
 });
