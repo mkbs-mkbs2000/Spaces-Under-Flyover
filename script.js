@@ -3,15 +3,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVoYW1tYWRraGFsaXMyMDAwIiwiYSI6ImNtNmllbGt4c
 const map = new mapboxgl.Map({
     container: 'my-map', // map container ID
     style: 'mapbox://styles/muhammadkhalis2000/cm6yk8amv00kb01s16rkt56d2', // style URL
-    center: [-79.3891087845972, 43.665922789825515], // starting position [lng, lat]
-    zoom: 2,
+    center: [155.41187531993666, 60.61674897619747], // starting position [lng, lat]
+    zoom: 1,
 });
 
 map.on('load', () => {
 
     map.addSource('points', {
         type: 'geojson',
-        data: '../data/point-flyover.geo.json'
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/point-flyover.geojson'
     });
 
     map.addLayer({
@@ -23,4 +23,38 @@ map.on('load', () => {
             'circle-color': '#007cbf'
         }
     });
+
+    map.addSource('polygons',{
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/polygon-flyover.geojson'
+    });
+
+    map.addLayer({
+        'id': 'polygons',
+        'type': 'fill',
+        'source': 'polygons',
+        'paint': {
+            'fill-color': '#007cbf',
+            'fill-opacity': 1
+        }
+    })
+
+});
+
+map.on('mouseenter', 'points', (e) => {
+    map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('click', 'points', (e) => {
+    const coordinates = e.features[0].geometry.coordinates;
+
+    console.log('Clicked coordinates:', coordinates); // Log the coordinates
+    
+    map.setCenter(coordinates);
+    
+    map.setZoom(15);
+});
+
+map.on('mouseleave', 'points', () => {
+    map.getCanvas().style.cursor = '';
 });
