@@ -46,15 +46,14 @@ map.on('mouseenter', 'points', (e) => {
 });
 
 map.on('click', 'points', (e) => {
-    console.log('Clicked feature:', e.features[0]);
+    const features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
 
-    const coordinates = e.features[0].properties.coord; // Get the coordinates of the clicked point
-
-    console.log('Clicked coordinates:', coordinates); // Log the coordinates
-    
-    map.setCenter(coordinates);
-
-    map.setZoom(15);
+    if (features.length > 0) {
+        const coordinates = features[0].geometry.coordinates;
+        console.log('Clicked coordinates:', coordinates);
+        map.setCenter(e.features[0].properties.coord);
+        map.setZoom(15);
+    }
 });
 
 map.on('mouseleave', 'points', () => {
