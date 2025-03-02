@@ -65,7 +65,8 @@ map.on('click', 'points', (e) => {
 
     map.flyTo({
         center: coordinates,
-        zoom: 13
+        zoom: 13,
+        essential: true
     });
 
     map.setLayoutProperty('points', 'visibility', 'none');
