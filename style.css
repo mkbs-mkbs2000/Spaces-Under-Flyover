@@ -38,19 +38,19 @@ html, body {
     margin-right: 5px;
 }
 
-#yearLegend div:nth-child(1) span {
+#yearLegend div:nth-child(2) span {
     background-color: #800080;
 }
 
-#yearLegend div:nth-child(2) span {
+#yearLegend div:nth-child(3) span {
     background-color: #00FF00;
 }
 
-#yearLegend div:nth-child(3) span {
+#yearLegend div:nth-child(4) span {
     background-color: #FFD700;
 }
 
-#yearLegend div:nth-child(4) span {
+#yearLegend div:nth-child(5) span {
     background-color: #FF6347;
 }
 
@@ -58,7 +58,7 @@ html, body {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.7);
     bottom: 0;
-    left: 0;
+    right: 0;
     margin: 0 10px 30px 0;
     padding: 10px;
     border-radius: 8px;

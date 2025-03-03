@@ -79,8 +79,8 @@ map.on('load', () => {
 
     map.setLayoutProperty('polygons', 'visibility', 'none');
 
-    document.getElementById('areaLegend').style.display = 'block';
-    document.getElementById('yearLegend').style.display = 'none';
+    document.getElementById('yearLegend').style.display = 'block';
+    document.getElementById('areaLegend').style.display = 'none';
 });
 
 map.on('mouseenter', 'points', (e) => {
@@ -109,8 +109,8 @@ map.on('click', 'points', (e) => {
 
     textToShow(e);
 
-    document.getElementById('yearLegend').style.display = 'block';
-    document.getElementById('areaLegend').style.display = 'none';
+    document.getElementById('areaLegend').style.display = 'block';
+    document.getElementById('yearLegend').style.display = 'none';
 });
 
 map.on('mouseleave', 'points', () => {
@@ -132,6 +132,6 @@ document.getElementById('return').addEventListener('click', () => {
     document.getElementById('intro').style.display = 'block';
     document.getElementById('TextToShow').style.display = 'none';
 
-    document.getElementById('areaLegend').style.display = 'block';
-    document.getElementById('yearLegend').style.display = 'none';
+    document.getElementById('yearLegend').style.display = 'block';
+    document.getElementById('areaLegend').style.display = 'none';
 });
