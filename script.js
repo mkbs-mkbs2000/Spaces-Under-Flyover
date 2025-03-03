@@ -2,17 +2,47 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVoYW1tYWRraGFsaXMyMDAwIiwiYSI6ImNtNmllbGt4c
 
 const map = new mapboxgl.Map({
     container: 'my-map', // map container ID
-    style: 'mapbox://styles/muhammadkhalis2000/cm7rzt31l001m01s01te6bc10', // style URL
+    style: 'mapbox://styles/muhammadkhalis2000/cm6yk8amv00kb01s16rkt56d2', // style URL
     center: [155.41187531993666, 60.61674897619747], // starting position [lng, lat]
     zoom: 1,
 });
 
-map.on('load', () => {
+const popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
 
+function dontShow() {
+    document.getElementById('NewOrleans').style.display = 'none';
+    document.getElementById('Toronto').style.display = 'none';
+    document.getElementById('Mumbai').style.display = 'none';
+    document.getElementById('Zaanstad').style.display = 'none';
+    document.getElementById('Bandung').style.display = 'none';
+};
+
+function textToShow(e) {
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('TextToShow').style.display = 'block';
+
+    dontShow();
+
+    if (e.features[0].properties.Name === 'Claiborne Corridor') {
+        document.getElementById('NewOrleans').style.display = 'block';
+    } else if (e.features[0].properties.Name === 'The Bentway') {
+        document.getElementById('Toronto').style.display = 'block';
+    } else if (e.features[0].properties.Name === 'One Green Mile') {
+        document.getElementById('Mumbai').style.display = 'block';
+    } else if (e.features[0].properties.Name === 'A8ernA') {
+        document.getElementById('Zaanstad').style.display = 'block';
+    } else {
+        document.getElementById('Bandung').style.display = 'block';
+    }
+};
+
+map.on('load', () => {
     map.addSource('points', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/point-flyover.geojson',
-        tolerance: 0
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/point-flyover.geojson'
     });
 
     map.addLayer({
@@ -21,14 +51,20 @@ map.on('load', () => {
         'source': 'points',
         'paint': {
             'circle-radius': 5,
-            'circle-color': '#007cbf'
+            'circle-color': [
+                'case',
+                ['==', ['get', 'OpeningYr'], 2005], '#800080',
+                ['==', ['get', 'OpeningYr'], 2014], '#00FF00',
+                ['==', ['get', 'OpeningYr'], 2018], '#FFD700',
+                ['==', ['get', 'OpeningYr'], 2022], '#FF6347',
+                '#000000'
+            ]
         }
     });
 
     map.addSource('polygons',{
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/polygon-flyover.geojson',
-        tolerance: 0
+        data: 'https://raw.githubusercontent.com/mkbs-mkbs2000/Spaces-Under-Flyover/refs/heads/main/data/polygon-flyover.geojson'
     });
 
     map.addLayer({
@@ -36,16 +72,15 @@ map.on('load', () => {
         'type': 'fill',
         'source': 'polygons',
         'paint': {
-            'fill-color': '#007cbf',
-            'fill-opacity': 0.5
+            'fill-color': '#ff000d',
+            'fill-opacity': 0.65
         }
-    })
+    });
 
-});
+    map.setLayoutProperty('polygons', 'visibility', 'none');
 
-const popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false
+    document.getElementById('areaLegend').style.display = 'block';
+    document.getElementById('yearLegend').style.display = 'none';
 });
 
 map.on('mouseenter', 'points', (e) => {
@@ -70,9 +105,12 @@ map.on('click', 'points', (e) => {
     });
 
     map.setLayoutProperty('points', 'visibility', 'none');
+    map.setLayoutProperty('polygons', 'visibility', 'visible');
 
-    document.getElementById('intro').style.display = 'none';
-    document.getElementById('Toronto').style.display = 'block';
+    textToShow(e);
+
+    document.getElementById('yearLegend').style.display = 'block';
+    document.getElementById('areaLegend').style.display = 'none';
 });
 
 map.on('mouseleave', 'points', () => {
@@ -80,8 +118,6 @@ map.on('mouseleave', 'points', () => {
 
     popup.remove();
 });
-
-
 
 document.getElementById('return').addEventListener('click', () => {
     map.flyTo({
@@ -91,7 +127,11 @@ document.getElementById('return').addEventListener('click', () => {
     });
 
     map.setLayoutProperty('points', 'visibility', 'visible');
+    map.setLayoutProperty('polygons', 'visibility', 'none');
 
     document.getElementById('intro').style.display = 'block';
-    document.getElementById('Toronto').style.display = 'none';
+    document.getElementById('TextToShow').style.display = 'none';
+
+    document.getElementById('areaLegend').style.display = 'block';
+    document.getElementById('yearLegend').style.display = 'none';
 });

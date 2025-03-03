@@ -14,28 +14,58 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 vh-100 bg-warning-subtle" id="info">
+            <div class="col-md-6 vh-100 bg-warning-subtle" id="info">
                 <h2 class="text-center mt-4">Spaces Under Flyovers</h2>
                 <h4 class="text-center mb-4"><u>How Other Places Have Done It</u></h4>
 
                 <p id="intro">
                     Hover over the points on the map and click on them to learn more about the five examples of revitalisation of underutilised spaces under flyovers.
-                    Following that, click on the button below to return to the default extent of the map.
+                    To look at other locations, click on the button below to return to the default extent of the map, and click on a new point on the map.
                 </p>
 
-                <p id="Toronto">
-                    The Bentway is located under the Gardiner Expressway in Toronto.
-                </p>
+                <div id="TextToShow">
+                    <div id="NewOrleans">
+                        Claiborne Corridor is located under the Interstate-10 Expressway, along North Claiborne Avenue between St Bernard Avenue and Canal Street, in New Orleans, Louisiana, USA.
+                    </div>
+
+                    <div id="Toronto">
+                        Bentway is located under the Gardiner Expressway, between Fort York Boulevard and Fort York Historic National Site, in Toronto, Ontario, Canada.
+                    </div>
+
+                    <div id="Mumbai">
+                        One Green Mile is located under the Elphinstone Flyover, along Senapati Bapat Marg, in Mumbai, Maharashtra, India.
+                    </div>
+
+                    <div id="Zaanstad">
+                        A8ernA is located under the A8 motorway, between N203 provincial road and the Zaan River, in Zaanstad, North Holland, the Netherlands.
+                    </div>
+
+                    <div id="Bandung">
+                        Taman Film is located under the Jalan Layang Pasupati flyover, in Bandung, West Java, Indonesia.
+                    </div>
+                </div>
 
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button type="button" class="btn btn-primary mx-auto" id="return">Return to Default Extent</button>
                 </div>
             </div>
             
-            <div class="col-md-8 p-0">
+            <div class="col-md-6 p-0">
                 <div id="my-map"></div>
             </div>
         </div>
+    </div>
+
+    <div id="yearLegend" class="legend">
+        <h6>Year of Opening</h6>
+        <div><span></span>2005</div>
+        <div><span></span>2014</div>
+        <div><span></span>2018</div>
+        <div><span></span>2022</div>
+    </div>
+
+    <div id="areaLegend" class="legend">
+        <div><span></span>Revitalised Area Under Flyover</div>
     </div>
     
     <script src="script.js"></script>

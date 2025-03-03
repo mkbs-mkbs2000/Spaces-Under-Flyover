@@ -5,7 +5,8 @@
             "type": "Feature",
             "properties": {
                 "Name": "Claiborne Corridor",
-                "Location": "New Orleans, USA"
+                "Location": "New Orleans, USA",
+                "OpeningYr": 2018
             },
             "geometry": {
                 "coordinates": [
@@ -19,7 +20,8 @@
             "type": "Feature",
             "properties": {
                 "Name": "The Bentway",
-                "Location": "Toronto, Canada"
+                "Location": "Toronto, Canada",
+                "OpeningYr": 2018
             },
             "geometry": {
                 "coordinates": [
@@ -33,7 +35,8 @@
             "type": "Feature",
             "properties": {
                 "Name": "One Green Mile",
-                "Location": "Mumbai, India"
+                "Location": "Mumbai, India",
+                "OpeningYr": 2022
             },
             "geometry": {
                 "coordinates": [
@@ -47,7 +50,8 @@
             "type": "Feature",
             "properties": {
                 "Name": "A8ernA",
-                "Location": "Zaanstad, the Netherlands"
+                "Location": "Zaanstad, the Netherlands",
+                "OpeningYr": 2005
             },
             "geometry": {
                 "coordinates": [
@@ -61,7 +65,8 @@
             "type": "Feature",
             "properties": {
                 "Name": "Taman Film",
-                "Location": "Bandung, Indonesia"
+                "Location": "Bandung, Indonesia",
+                "OpeningYr": 2014
             },
             "geometry": {
                 "coordinates": [
