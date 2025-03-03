@@ -4,20 +4,26 @@ html, body {
     height: 100%;
 }
 
+/*The left side of the webpage is set such that one cannot scroll left-right
+Instead, the setting to scroll up-down is set as auto
+This is because when more info is added for each flyover, readers can read along by scrolling down*/
 #info {
     overflow: auto;
     overflow-x: hidden;
 }
 
+/*Default setting of the <div id="TextToShow> block is set to hidden at first, so that the customisation function in CSS can work*/
 #TextToShow {
     display: none;
 }
 
+/*Map is set to cover the entire of the right side of webpage*/
 #my-map {
     width: 100%;
     height: 100vh;
 }
 
+/*Styling the Opening Year legend to be at the bottom right corner, with the code mostly similar to the one shown in Wk 8 Lecture*/
 #yearLegend {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.7);
@@ -54,6 +60,8 @@ html, body {
     background-color: #FF6347;
 }
 
+/*Styling the Revitalised Area legend to be also at the bottom right corner
+But the initial display is set to be none so that the switch can happen when user zooms into a specific point*/
 #areaLegend {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.7);
@@ -64,6 +72,7 @@ html, body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 200px;
+    display: none;
 }
 
 #areaLegend span {
