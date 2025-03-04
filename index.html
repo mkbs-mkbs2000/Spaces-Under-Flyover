@@ -17,10 +17,12 @@
 
             <!--The left half of the webpage will be text-->
             <div class="col-md-6 vh-100 bg-warning-subtle" id="info">
-                <h1 class="text-center mt-4"><strong>Spaces Under Flyovers</strong></h1>
-                <h3 class="text-center mb-4"><u>How Other Places Have Done It</u></h3>
+                <div class="container-fluid text-center bg-info p-2">
+                    <h1><strong>Spaces Under Flyovers</strong></h1>
+                    <h3><u>How Other Places Have Done It</u></h3>
+                </div>
 
-                <p id="intro">
+                <p id="intro" class="p-2">
                     Hover over the points on the map and click on them to learn more about the five examples of revitalisation of underutilised spaces under flyovers.<br><br>
                     To explore other locations, click on the home button at the right to return to the default extent of the map, and then click on a new point on the map.<br><br>
                     For optimal viewing experience, please access using a desktop instead of mobile.
@@ -28,26 +30,60 @@
 
                 <!--This div contains the specific texts that will be reflected based on which points on the map was clicked-->
                 <div id="TextToShow">
-                    <div id="NewOrleans">
+                    <div id="NewOrleans" class="p-2">
                         <h4 class="text-center"><strong>Claiborne Corridor, New Orleans, United States</strong></h4>
-                        <h5 class="text-center mb-4"><u>An Attempt at Undoing 60 Years of Urban Racism</u></h5>
+                        <h5 class="text-center"><u>A Community's Desire to Undo 60 Years of Urban Racism</u></h5>
                         
                         <p>
                             Claiborne Corridor is located under the Interstate-10 Expressway, along North Claiborne Avenue between St Bernard Avenue and Canal Street, in New Orleans, Louisiana, USA.
                         </p>
                     </div>
 
-                    <div id="Toronto">
+                    <div id="Toronto" class="p-2">
                         <h4 class="text-center"><strong>The Bentway, Toronto, Canada</strong></h4>
-                        <h5 class="text-center mb-4"><u>What's Up With This Place</u></h5>
+                        <h5 class="text-center mb-4"><u>A Public-Private Partnership Space in a (Largely) Public-Private Partnership City</u></h5>
                         
                         <p>
-                            The Bentway is located under the Gardiner Expressway, between Fort York Boulevard and Fort York Historic National Site, in Toronto, Ontario, Canada.<br><br>
-
+                            The Bentway is a public multi-use space located under the Gardiner Expressway, between Fort York Boulevard and Fort York Historic National Site.
+                            It is most famous for being an ice-skating park during the winter months, but it also serves as a public art gallery, skating park and a venue for various events throughout the year.
+                            It is situated within the Fort York neighbourhood in downtown Toronto, and surounded by high-rise residential developments.
                         </p>
+
+                        <img src="data/bentway-2.png" alt="The Bentway viewed from above Gardiner Expressway" class="img-fluid rounded mx-auto d-block mb-3">
+                        
+                        <h6><strong>BACKGROUND</strong></h6>
+                        <p>
+                            Although there have been intentions to create "a plaza-like area" with "publicly-accessible thoroughfares for pedestrians..., public art... [and] outdoor amenity space" at this specific area since 2004, it was Ken Greenberg, a renowned urban designer and author, who got the ball rolling in 2011.
+                            Then, he pitched this idea to urban planner Judy Matthews and her husband Wilmot, an investment banker, who wanted to fund a "legacy project" in the city (Hess & Stevenson-Blythe, 2022).
+                            The idea won the support of the city because it was also aligned with the city's aims to enliven the underutilised areas along the elevated portions of Gardiner Expressway (marked in purple in the map), which has long served as a barrier between the main downtown areas to its north and the Waterfront to its south.<br><br>
+                            After an initial seed donation of CAD$25 million from Judy and Wilmot, the city announced "Project: Under Gardiner" to revitalise the entire stretch, of which the Bentway is a part.
+                            The Bentway was officially opened to the public in January 2018, with about 20,000 people coming to use the space on its opening weekend (Cecco, 2024)
+                        </p>
+
+                        <img src="data/bentway-1.jpg" alt="The Bentway as Ice-Skating Trail during Winter Season" class="img-fluid rounded mx-auto d-block mb-3">
+                        <img src="data/Bentway-3.webp" alt="The Bentway as Skateboarding Park outside of Winter Season" class="img-fluid rounded mx-auto d-block mb-3">
+
+                        <h6><strong>GOVERNANCE AND MAINTENANCE</strong></h6>
+                        <p>
+                            A City Council report recommended the creation of a new non-profit organisation to manage and finance the day-to-day operations of the Bentway (City of Toronto, 2016).
+                            This non-profit organisation, The Bentway Conservancy, was established the following year.
+                            The decision to let a private entity, albeit non-profit, to manage a public space that is essentially owned by the city (by virtue of the expressway that runs above it) is made because the city would face serious budget constraints had it been under full municipal jurisdiction.
+                            This practice is also in line with numerous other projects done across Toronto, where the city would own the infrastructure but let a separate private entity to run it (Hess & Stevenson-Blythe, 2022).<br><br>
+                            Pertaining to funding, the city committed CAD$10 million, to be disbursed over a period of eight years, to the Bentway Conservancy.
+                            The city also empowers the Bentway Conservancy to seek alternative funding sources such as sponsorships, donations and collecting fees from nearby businesses through Business Improvement Association.<br><br>
+                            This conservancy model has proven successful because the Bentway remains a well-attended space seven years after its opening. 
+                            The Conservancy is also appointed as partners with the city to realise "Project: Under Gardiner", which has since been rebranded as <a target="_blank" href="https://undergardinerprp.ca/">Under Gardiner Public Realm Plan</a>.
+                        </p>
+
+                        <h6><strong>REFERENCES</strong></h6>
+                        <ul>
+                            <li>Cecco, L. (2024, July 17). How 'magical' Bentway linear park put Toronto on road to regeneration. <i>The Guardian</i>. <a target="_blank" href="https://www.theguardian.com/world/article/2024/jul/17/toronto-bentway-park-highway-regeneration">https://www.theguardian.com/world/article/2024/jul/17/toronto-bentway-park-highway-regeneration</a></li>
+                            <li>City of Toronto. (2016). <i>Governance and funding options for Project: Under Gardiner and class environmental assessment for crossing of Fort York Boulevard</i>. <a target="_blank" href="https://www.toronto.ca/legdocs/mmis/2016/ex/bgrd/backgroundfile-94187.pdf">https://www.toronto.ca/legdocs/mmis/2016/ex/bgrd/backgroundfile-94187.pdf</a></li>
+                            <li>Hess, P. & Stevenson-Blythe, C. (2022). Infrastructural reuse projects, lost spaces, and spaces of homelessness: A case study on the Bentway in Toronto. <i>Journal of Urbanism: International Research on Placemaking and Urban Sustainability</i>, 1-20. <a target="_blank" href="https://doi.org/10.1080/17549175.2022.2138950">https://doi.org/10.1080/17549175.2022.2138950</a></li>
+                        </ul>
                     </div>
 
-                    <div id="Mumbai">
+                    <div id="Mumbai" class="p-2">
                         <h4 class="text-center"><strong>One Green Mile, Mumbai, India</strong></h4>
                         <h5 class="text-center mb-4"><u>What's Up With This Place?</u></h5>
                         
@@ -56,16 +92,16 @@
                         </p>
                     </div>
 
-                    <div id="Zaanstad">
+                    <div id="Zaanstad" class="p-2">
                         <h4 class="text-center"><strong>A8ernA, Zaanstad, the Netherlands</u></strong></h4>
-                        <h5 class="text-center mb-4"><u>An Pioneer in Revitalising Neglected Spaces Under Flyover</u></h5>
+                        <h5 class="text-center mb-4"><u>A Pioneer in Revitalising Neglected Spaces Under Flyover</u></h5>
                         
                         <p>
                             A8ernA is located under the A8 motorway, between N203 provincial road and the Zaan River, in Zaanstad, North Holland, the Netherlands.
                         </p>
                     </div>
 
-                    <div id="Bandung">
+                    <div id="Bandung" class="p-2">
                         <h4 class="text-center"><strong>Taman Film, Bandung, Indonesia</u></strong></h4>
                         <h5 class="text-center mb-4"><u>A Cautionary Tale about Reliance on Corporate Service Responsibility to Fund Public Revitalisation Efforts</u></h5>
                         

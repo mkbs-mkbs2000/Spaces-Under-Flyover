@@ -2,6 +2,6 @@ An interactive map that showcases five flyover locations around the world, where
 
 This will eventually be part of a larger online resource guide on how to revitalise neglected spaces under flyovers, with a focus on India and Pune, a city in Maharashtra state. This online resource guide is a final deliverable for a project that is part of the School of Cities' Multidisciplinary Urban Capstone Project. More info can be accessed via the following link: (https://schoolofcities.utoronto.ca/learning-sofc/mucp/mucp-imucp-2024-25/#india)
 
-For now, it will also serve as the Lab 3 submission for GGR472: Developing Web Maps.
+For now, it will also serve as the Lab 3 submission for GGR472: Developing Web Maps. As such, the only incomplete part of this map as of March 3, 2025, is the text and images that will be displayed to provide more information on each revitalised space.
 
 Since this is a ground-up project in creating a new resource, data sources used in the map is created solely by author. In the main folder, contains the HTML, CSS and Javascript files. In the data subfolder are the GeoJSON files of points (visible at full extent) and polygons (visible when zoomed in) of the flyover locations where the spaces underneath it have been revitalised. Also in the data subfolder are the images of the revitalised spaces that are added into the website.
