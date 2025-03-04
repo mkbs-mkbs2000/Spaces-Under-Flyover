@@ -91,7 +91,8 @@ map.on('load', () => {
     map.setLayoutProperty('polygons', 'visibility', 'none');
 
     // Adding the navigation control to the map at the top-right corner
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    // I removed compass from the navigation control
+    map.addControl(new mapboxgl.NavigationControl({showCompass: false}), 'top-right');
 });
 
 // Function at the default extent view when the mouse hovers over a point

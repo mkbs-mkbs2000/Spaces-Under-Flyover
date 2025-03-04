@@ -85,3 +85,27 @@ But the initial display is set to be none so that the switch can happen when use
 #areaLegend div span {
     background-color: #ff000d;
 }
+
+/*Styling the Home button to be at the top right corner of the webpage under the navigation controls, 
+and looking similar to the look of the navcontrol bar*/
+#home {
+    position: absolute;
+    background-color: rgba(220, 220, 220, 0.7);
+    top: 80px;      /*80px from the top puts it under the navcontrol bar*/
+    right: 0;
+    margin: 0 8px 30px 0;
+    border-radius: 5px;
+    width: 35px;    /*This roughly makes the home div box slightly larger than the width of navcontrol bar*/
+    height: 35px;
+    display: flex;  /*Enables the next three lines of code*/
+    justify-content: center; /*Puts the icon at the centre based on the x-axis*/
+    align-items: center; /*Puts the icon at the centre based on the y-axis*/
+    cursor: pointer; /*When user hovers mouse on it, the cursor becomes a pointer indicating clickability*/
+}
+
+#return {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white; /*The image has a transparent, changeable background. Hence white is chosen to ensure consistency with navcontrol bar*/
+}

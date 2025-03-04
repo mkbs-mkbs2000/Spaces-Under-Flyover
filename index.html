@@ -22,7 +22,7 @@
 
                 <p id="intro">
                     Hover over the points on the map and click on them to learn more about the five examples of revitalisation of underutilised spaces under flyovers.
-                    To look at other locations, click on the button below to return to the default extent of the map, and click on a new point on the map.
+                    To explore other locations, click on the home button at the right to return to the default extent of the map, and then click on a new point on the map.
                 </p>
 
                 <!--This div contains the specific texts that will be reflected based on which points on the map was clicked-->
@@ -46,6 +46,9 @@
                     </div>
 
                     <div id="Zaanstad">
+                        <h5 class="text-center"><strong><u>A8ernA, Zaanstad, the Netherlands</u></strong></h5>
+                        <h6 class="text-center mb-2">An Successful Instance of Community Coming Together to Revitalise a Space</h6>
+                        
                         <p>
                             A8ernA is located under the A8 motorway, between N203 provincial road and the Zaan River, in Zaanstad, North Holland, the Netherlands.
                         </p>
@@ -56,11 +59,6 @@
                             Taman Film is located under the Jalan Layang Pasupati flyover, in Bandung, West Java, Indonesia.
                         </p>
                     </div>
-                </div>
-
-                <!--The button to return the view back to default extent, so that viewer can click on other points on the map-->
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="button" class="btn btn-primary mx-auto" id="return">Return to Default Extent</button>
                 </div>
             </div>
             
@@ -83,6 +81,11 @@
     <!--Legend to show the areas under the specific flyover(s) that have been revitalised into public spaces-->
     <div id="areaLegend" class="legend">
         <div><span></span>Revitalised Area Under Flyover</div>
+    </div>
+
+    <!--Addition of home button that users can click on to return to default map extent-->
+    <div id="home">
+        <img src="data/home.png" alt="Back to Default Extent" id="return">
     </div>
     
     <script src="script.js"></script>
