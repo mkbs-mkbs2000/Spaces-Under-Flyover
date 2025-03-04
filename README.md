@@ -1,1 +1,5 @@
-An interactive map that showcases examples in revitalising spaces under flyovers around the world. This will eventually be used as part of the final deliverable for Multidisciplinary Urban Capstone Project, but in the early stages will be used as Lab 3 submission for GGR472: Developing Web Maps.
+An interactive map that showcases five flyover locations around the world, where the spaces underneath it have been revitalised for public use. Clicking on a location on the map will focus the viewer to the location, and information on it will also be revealed.
+
+This will eventually be part of a larger online resource guide on how to revitalise neglected spaces under flyovers, with a focus on India and Pune, a city in Maharashtra state. This online resource guide is a final deliverable for a project that is part of the School of Cities' Multidisciplinary Urban Capstone Project. More info can be accessed via the following link: (https://schoolofcities.utoronto.ca/learning-sofc/mucp/mucp-imucp-2024-25/#india)
+
+For now, it will also serve as the Lab 3 submission for GGR472: Developing Web Maps.
