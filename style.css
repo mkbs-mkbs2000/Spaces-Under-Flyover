@@ -4,6 +4,10 @@ html, body {
     height: 100%;
 }
 
+p {
+    font-size: 14px;
+}
+
 /*The left side of the webpage is set such that one cannot scroll left-right
 Instead, the setting to scroll up-down is set as auto
 This is because when more info is added for each flyover, readers can read along by scrolling down*/
@@ -82,8 +86,12 @@ But the initial display is set to be none so that the switch can happen when use
     margin-right: 5px;
 }
 
-#areaLegend div span {
+#areaLegend div:nth-child(1) span {
     background-color: #ff000d;
+}
+
+#areaLegend div:nth-child(2) span {
+    background-color: #bd05f5;
 }
 
 /*Styling the Home button to be at the top right corner of the webpage under the navigation controls, 
