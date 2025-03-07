@@ -93,6 +93,10 @@ map.on('load', () => {
     // Adding the navigation control to the map at the top-right corner
     // I removed compass from the navigation control
     map.addControl(new mapboxgl.NavigationControl({showCompass: false}), 'top-right');
+
+    // When map loads, popup message to inform readers how to use the website, toggling between points and returning to default extent
+    const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+    welcomeModal.show();
 });
 
 // Function at the default extent view when the mouse hovers over a point
@@ -155,9 +159,9 @@ document.getElementById('home').addEventListener('mouseout', () => {
     document.getElementById('returnPop').style.opacity = '0';
 });
 
-document.getElementById('return').addEventListener('click', () => {
+document.getElementById('home').addEventListener('click', () => {
     
-    // When the return button is clicked, the map flies back to the default extent view
+    // When the home icon is clicked, the map flies back to the default extent view
     map.flyTo({
         center: [155.41187531993666, 60.61674897619747],
         zoom: 1,
