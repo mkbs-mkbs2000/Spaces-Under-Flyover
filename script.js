@@ -62,7 +62,7 @@ map.on('load', () => {
                 'case',
                 ['==', ['get', 'OpeningYr'], 2005], '#690469',
                 ['==', ['get', 'OpeningYr'], 2014], '#167616',
-                ['==', ['get', 'OpeningYr'], 2018], '#ffff00',
+                ['==', ['get', 'OpeningYr'], 2018], '#0004ff',
                 ['==', ['get', 'OpeningYr'], 2022], '#ff0000',
                 '#000000'
             ]

@@ -4,16 +4,20 @@ html, body {
     height: 100%;
 }
 
-p, li {
-    font-size: 14px;
-}
-
 /*The left side of the webpage is set such that one cannot scroll left-right
 Instead, the setting to scroll up-down is set as auto
 This is because when more info is added for each flyover, readers can read along by scrolling down*/
 #info {
     overflow: auto;
     overflow-x: hidden;
+}
+
+#red {
+    color: red
+}
+
+#purple {
+    color: purple
 }
 
 /*Default setting of the <div id="TextToShow> block is set to hidden at first, so that the customisation function in CSS can work*/
@@ -61,7 +65,7 @@ This is because when more info is added for each flyover, readers can read along
 }
 
 #yearLegend div:nth-child(4) span {
-    background-color: #ffea00;
+    background-color: #0004ff;
 }
 
 #yearLegend div:nth-child(5) span {
