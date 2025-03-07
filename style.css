@@ -21,6 +21,10 @@ This is because when more info is added for each flyover, readers can read along
     display: none;
 }
 
+#map-container {
+    position: relative;
+}
+
 /*Map is set to cover the entire of the right side of webpage*/
 #my-map {
     width: 100%;
@@ -49,19 +53,19 @@ This is because when more info is added for each flyover, readers can read along
 }
 
 #yearLegend div:nth-child(2) span {
-    background-color: #800080;
+    background-color: #c107c1;
 }
 
 #yearLegend div:nth-child(3) span {
-    background-color: #00FF00;
+    background-color: #167616;
 }
 
 #yearLegend div:nth-child(4) span {
-    background-color: #FFD700;
+    background-color: #ffea00;
 }
 
 #yearLegend div:nth-child(5) span {
-    background-color: #FF6347;
+    background-color: #ff0000;
 }
 
 /*Styling the Revitalised Area legend to be also at the bottom right corner
@@ -116,4 +120,23 @@ and looking similar to the look of the navcontrol bar*/
     height: 30px;
     border-radius: 5px;
     background-color: white; /*The image has a transparent, changeable background. Hence white is chosen to ensure consistency with navcontrol bar*/
+}
+
+/*Styling the popup message to inform viewers to return to default extent
+Largely adapted from the CSS code derived from the following website
+https://www.w3schools.com/howto/howto_js_popup.asp*/
+#returnPop {
+    visibility: hidden;
+    width: 70px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 110%; /*This is to reflect the popup at the bottom of the icon instead of at the top*/
+    right: 0%; /*This is to reflect the popup at the right, aligned to the icon that is already at the right of the page*/
+    opacity: 0;
+    font-size: 10px;
 }

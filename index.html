@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revitalised Spaces Under Flyovers</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,14 +17,14 @@
 
             <!--The left half of the webpage will be text-->
             <div class="col-md-6 vh-100 bg-warning-subtle" id="info">
-                <div class="container-fluid text-center bg-info p-2">
+                <div class="container-fluid sticky-top text-center bg-info p-2">
                     <h1><strong>Spaces Under Flyovers</strong></h1>
                     <h3><u>How Other Places Have Done It</u></h3>
                 </div>
 
                 <p id="intro" class="p-2">
                     Hover over the points on the map and click on them to learn more about the five examples of revitalisation of underutilised spaces under flyovers.<br><br>
-                    To explore other locations, click on the home button at the right to return to the default extent of the map, and then click on a new point on the map.<br><br>
+                    To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.<br><br>
                     For optimal viewing experience, please access using a desktop instead of mobile.
                 </p>
 
@@ -37,6 +37,9 @@
                         <p>
                             Claiborne Corridor is located under the Interstate-10 Expressway, along North Claiborne Avenue between St Bernard Avenue and Canal Street, in New Orleans, Louisiana, USA.
                         </p>
+
+                        <p>To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.</p>
+
                     </div>
 
                     <div id="Toronto" class="p-2">
@@ -81,6 +84,8 @@
                             <li>City of Toronto. (2016). <i>Governance and funding options for Project: Under Gardiner and class environmental assessment for crossing of Fort York Boulevard</i>. <a target="_blank" href="https://www.toronto.ca/legdocs/mmis/2016/ex/bgrd/backgroundfile-94187.pdf">https://www.toronto.ca/legdocs/mmis/2016/ex/bgrd/backgroundfile-94187.pdf</a></li>
                             <li>Hess, P. & Stevenson-Blythe, C. (2022). Infrastructural reuse projects, lost spaces, and spaces of homelessness: A case study on the Bentway in Toronto. <i>Journal of Urbanism: International Research on Placemaking and Urban Sustainability</i>, 1-20. <a target="_blank" href="https://doi.org/10.1080/17549175.2022.2138950">https://doi.org/10.1080/17549175.2022.2138950</a></li>
                         </ul>
+
+                        <p>To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.</p>
                     </div>
 
                     <div id="Mumbai" class="p-2">
@@ -90,6 +95,9 @@
                         <p>
                             One Green Mile is located under the Elphinstone Flyover, along Senapati Bapat Marg, in Mumbai, Maharashtra, India.
                         </p>
+
+                        <p>To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.</p>
+
                     </div>
 
                     <div id="Zaanstad" class="p-2">
@@ -99,6 +107,9 @@
                         <p>
                             A8ernA is located under the A8 motorway, between N203 provincial road and the Zaan River, in Zaanstad, North Holland, the Netherlands.
                         </p>
+
+                        <p>To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.</p>
+
                     </div>
 
                     <div id="Bandung" class="p-2">
@@ -144,35 +155,39 @@
                             <li>Heinzelmann, F. & Suryawinata, D. (2020, November 4). <i>Taman Film: Inspiring a sense of belonging</i>. The City at Eye Level. <a target="_blank" href="https://thecityateyelevel.com/stories/taman-film-inspiring-a-sense-of-belonging/">https://thecityateyelevel.com/stories/taman-film-inspiring-a-sense-of-belonging/</a></li>
                             <li>Ihsanti, D. A. & Sugiyantoro. (2024). Placemaking di Kolong Jalan Layang: Fenomena penggunaan "lost space" untuk taman kota [Placemaking under Jalan Layang Flyover: The phenomenon of utilizing "lost space" for urban parks]. <i>Jurnal Pembangunan Wilayah dan Kota, 20</i>(4), 474-488. <a target="_blank" href="https://ejournal.undip.ac.id/index.php/pwk/article/view/65149/pdf">https://ejournal.undip.ac.id/index.php/pwk/article/view/65149/pdf</a></li>
                         </ul>
+
+                        <p>To explore other locations, <strong>click on the home button at the top right to return to the default extent of the map</strong>, and then click on a new point on the map.</p>
                     </div>
                 </div>
             </div>
             
             <!--Meanwhile the right half of the webpage is the map-->
-            <div class="col-md-6 p-0">
+            <div class="col-md-6 p-0" id="map-container">
                 <div id="my-map"></div>
+
+                <!--Legend to reflect the year in which the revitalised spaces started operations-->
+                <div id="yearLegend" class="legend">
+                    <h6>Year of Opening</h6>
+                    <div><span></span>2005</div>
+                    <div><span></span>2014</div>
+                    <div><span></span>2018</div>
+                    <div><span></span>2022</div>
+                </div>
+
+                <!--Legend to show the areas under the specific flyover(s) that have been revitalised into public spaces-->
+                <div id="areaLegend" class="legend">
+                    <div><span></span>Revitalised Area Under Flyover</div>
+                    <div><span></span>Elevated Roads</div>
+                </div>
+
+                <!--Addition of home button that users can click on to return to default map extent-->
+                <!--The home button itself has a popup message that informs viewer that this is the button to return to default extent-->
+                <div id="home">
+                    <img src="data/home.png" alt="Back to Default Extent" id="return">
+                    <span class="popuptext" id="returnPop">Return to Default Extent</span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!--Legend to reflect the year in which the revitalised spaces started operations-->
-    <div id="yearLegend" class="legend">
-        <h6>Year of Opening</h6>
-        <div><span></span>2005</div>
-        <div><span></span>2014</div>
-        <div><span></span>2018</div>
-        <div><span></span>2022</div>
-    </div>
-
-    <!--Legend to show the areas under the specific flyover(s) that have been revitalised into public spaces-->
-    <div id="areaLegend" class="legend">
-        <div><span></span>Revitalised Area Under Flyover</div>
-        <div><span></span>Elevated Roads</div>
-    </div>
-
-    <!--Addition of home button that users can click on to return to default map extent-->
-    <div id="home">
-        <img src="data/home.png" alt="Back to Default Extent" id="return">
     </div>
     
     <script src="script.js"></script>

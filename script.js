@@ -60,10 +60,10 @@ map.on('load', () => {
             'circle-radius': 7.5,
             'circle-color': [
                 'case',
-                ['==', ['get', 'OpeningYr'], 2005], '#800080',
-                ['==', ['get', 'OpeningYr'], 2014], '#00FF00',
-                ['==', ['get', 'OpeningYr'], 2018], '#FFD700',
-                ['==', ['get', 'OpeningYr'], 2022], '#FF6347',
+                ['==', ['get', 'OpeningYr'], 2005], '#690469',
+                ['==', ['get', 'OpeningYr'], 2014], '#167616',
+                ['==', ['get', 'OpeningYr'], 2018], '#ffff00',
+                ['==', ['get', 'OpeningYr'], 2022], '#ff0000',
                 '#000000'
             ]
         }
@@ -141,6 +141,18 @@ map.on('click', 'points', (e) => {
     // The Opening Year Legend is hidden, while the Revitalised Area Legend is activated
     document.getElementById('areaLegend').style.display = 'block';
     document.getElementById('yearLegend').style.display = 'none';
+});
+
+// When the mouse hovers over the home icon, the popup becomes visible and fully opaque
+document.getElementById('home').addEventListener('mouseover', () => {
+    document.getElementById('returnPop').style.visibility = 'visible';
+    document.getElementById('returnPop').style.opacity = '1';
+});
+
+// When the mouse leaves the home icon, the popup returns to become invisible and fully transparent
+document.getElementById('home').addEventListener('mouseout', () => {
+    document.getElementById('returnPop').style.visibility = 'hidden';
+    document.getElementById('returnPop').style.opacity = '0';
 });
 
 document.getElementById('return').addEventListener('click', () => {
