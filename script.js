@@ -144,7 +144,6 @@ map.on('click', 'points', (e) => {
 
     // The Opening Year Legend is hidden, while the Revitalised Area Legend is activated
     document.getElementById('areaLegend').style.display = 'block';
-    document.getElementById('yearLegend').style.display = 'none';
 });
 
 // When the mouse hovers over the home icon, the popup becomes visible and fully opaque
@@ -177,6 +176,5 @@ document.getElementById('home').addEventListener('click', () => {
     document.getElementById('TextToShow').style.display = 'none';
 
     // The legend reverts back to Opening Year Legend, similar to when the map is first loaded
-    document.getElementById('yearLegend').style.display = 'block';
     document.getElementById('areaLegend').style.display = 'none';
 });
