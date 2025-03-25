@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 html, body {
     margin: 0;
@@ -37,13 +38,15 @@ html, body {
 Instead, the setting to scroll up-down is set as auto
 This is because when more info is added for each flyover, readers can read along by scrolling down*/
 #info {
-    overflow: auto;
+    overflow-y: auto;
     overflow-x: hidden;
+    max-height: calc(100vh - 50px);
 }
 
 #title {
     background-color: black;
     color: #ffffff;
+    font-family: "Yeseva One", serif;
 }
 
 #red {
@@ -61,7 +64,7 @@ This is because when more info is added for each flyover, readers can read along
 
 #map-container {
     position: relative;
-    height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
 }
 
 /*Map is set to cover the entire of the right side of webpage*/
