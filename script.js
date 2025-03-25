@@ -3,7 +3,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVoYW1tYWRraGFsaXMyMDAwIiwiYSI6ImNtNmllbGt4c
 const map = new mapboxgl.Map({
     container: 'my-map',
     style: 'mapbox://styles/muhammadkhalis2000/cm7urw8lo01qo01qoap6z9a0m', // new map style
-    center: [155.41187531993666, 60.61674897619747], // starting position is set on the eastern Siberia end so that all five points are visible, albeit at the periphery
+    center: [154.41187531993666, 60.61674897619747], // starting position is set on the eastern Siberia end so that all five points are visible, albeit at the periphery
     zoom: 1, // the zoom level is set to 1 so that all five points are visible, albeit at the periphery
 });
 
@@ -155,7 +155,7 @@ document.getElementById('home').addEventListener('click', () => {
     
     // When the home icon is clicked, the map flies back to the default extent view
     map.flyTo({
-        center: [155.41187531993666, 60.61674897619747],
+        center: [154.41187531993666, 60.61674897619747],
         zoom: 1,
         essential: true
     });
