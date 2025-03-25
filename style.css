@@ -15,12 +15,16 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 4px 10px;
+    display: flex;
 }
 
-#navbar img {
+.navbar-logo {
     height: 43px;
     width: auto;
     object-fit: contain;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 #navbar .nav-link {
@@ -38,7 +42,7 @@ This is because when more info is added for each flyover, readers can read along
 }
 
 #title {
-    background-color: #58a3d9;
+    background-color: black;
     color: #ffffff;
 }
 
