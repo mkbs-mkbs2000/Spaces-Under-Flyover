@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+#navbar {
+    background-color: #58a3d9;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+}
+
+#navbar img {
+    height: 43px;
+    width: auto;
+    object-fit: contain;
+}
+
+#navbar .nav-link {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1.5px;
 }
 
 /*The left side of the webpage is set such that one cannot scroll left-right
@@ -10,6 +35,11 @@ This is because when more info is added for each flyover, readers can read along
 #info {
     overflow: auto;
     overflow-x: hidden;
+}
+
+#title {
+    background-color: #58a3d9;
+    color: #ffffff;
 }
 
 #red {
